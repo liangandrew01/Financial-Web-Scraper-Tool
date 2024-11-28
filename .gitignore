@@ -9,5 +9,5 @@ node_modules/
 .env
 
 
-index.js/
-test.js/
+index.js
+test2.js
