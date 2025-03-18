@@ -3,11 +3,27 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/other_adjacent_tests/
 
 # local env files
 .env*.local
 .env
 
-test4.js
+service-account-file.json
+
+sops-v3.9.4.checksums.pem
+sops-v3.9.4.checksums.sig
+sops-v3.9.4.checksums.txt
+
+myfirst.js
+index.js
+index.html
+output.html
+a-text-file.txt
+a-yaml-file.yaml
+a-yaml-file2.yaml
+an-env-file.env
+another-yaml-file.yaml
+
 
 

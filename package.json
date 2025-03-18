@@ -1,12 +1,14 @@
 {
+  "type": "module",
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.7.9",
     "cheerio": "^1.0.0-rc.12",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
+    "googleapis": "^144.0.0",
     "jsdom": "^20.0.3"
   },
   "devDependencies": {
-    "@playwright/test": "^1.48.2",
+    "@playwright/test": "^1.51.0",
     "@types/node": "^22.10.0"
   },
   "scripts": {}
