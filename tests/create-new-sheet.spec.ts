@@ -119,6 +119,14 @@ export async function createNewSheet(sheets, spreadsheetId) {
               range: `${newSheetTitle}!B21:G22`, // clear deposited thru venmo and personally paid items row
               values: Array(2).fill(Array(6).fill("")),
             },
+            {
+              range: `${newSheetTitle}!A6`, // enter $69 for maintenance and repairs
+              values: [["Maintenance and Repairs"]],
+            },
+            {
+              range: `${newSheetTitle}!H6`, // enter $69 for maintenance and repairs
+              values: [["69"]],
+            },
           ]
         },
     });
@@ -136,16 +144,16 @@ export async function createNewSheet(sheets, spreadsheetId) {
             repeatCell: {
               range: {
                 sheetId: newMonthSheet.data.sheetId, // Replace with actual sheet ID
-                startRowIndex: 1, // H2:H6
-                endRowIndex: 16, 
+                startRowIndex: 1, // H2:H16
+                endRowIndex: 17, 
                 startColumnIndex: 7,
                 endColumnIndex: 8,
               },
               cell: {
-                userEnteredValue: null, // Clears the cell value
+                // userEnteredValue: null, // Clears the cell value
                 note: "", // Clears any notes
               },
-              fields: "userEnteredValue,note",
+              fields: "note",
             },
           },
           {
@@ -158,10 +166,10 @@ export async function createNewSheet(sheets, spreadsheetId) {
                 endColumnIndex: 7,
               },
               cell: {
-                userEnteredValue: null, // Clears the cell value
+                // userEnteredValue: null, // Clears the cell value
                 note: "", // Clears any notes
               },
-              fields: "userEnteredValue,note",
+              fields: "note",
             },
           },
         ],

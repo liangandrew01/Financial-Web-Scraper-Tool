@@ -3,7 +3,7 @@ import { chromium, firefox, webkit } from 'playwright';
 import dotenv from 'dotenv'; // a Node.js library that helps manage environment variables like loading variables from .env files into process.env
 dotenv.config(); // loads variables defined in your .env file into process.env
 import { execSync } from 'child_process';
-import { combineExpenses } from '../other_adjacent_tests/combine-like-expenses';
+import { combineExpenses } from './combine-like-expenses';
 
 export async function allyExtraction(context, currentMonthIndex, fullYear) {
     // const browser = await chromium.launch();
@@ -122,7 +122,7 @@ export async function allyExtraction(context, currentMonthIndex, fullYear) {
     });
     const AndrewPaymentRows = allTransactionRows.filter({ //among all transaction divs, filter those with... (this stores the outer containers that match the description as a forking point)
         has: page.getByTestId('private-wrapper').getByTestId('transaction-history-desc').locator('span', { //...a description div containing a span which contains
-            hasText: 'ANDREW YU LIANG' //the following description (inner container) //count: 6
+            hasText: /ANDREW YU? LIANG/ //the following description (inner container) //count: 6
         })
     });
 
